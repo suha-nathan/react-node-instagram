@@ -14,7 +14,15 @@ router.get('/', (req, res) => {
 /*
 Get post
  */
+router.get("/", async(req, res) => {
+    try{
+        let mockUserData = {mockUserData}.map(() => {
+            {}
+        })
+    }catch(e){
 
+    }
+})
 
 
 /*
