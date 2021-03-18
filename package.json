@@ -9,6 +9,8 @@
     "dev": "nodemon server"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
+    "mongoose": "^5.12.0",
     "uuid-apikey": "^1.5.2"
   },
   "devDependencies": {
