@@ -1,6 +1,5 @@
 const router = require('express').Router()
 const User = require('../model/user.model')
-const
 
 router.get('/', (req, res) => {
     try{
