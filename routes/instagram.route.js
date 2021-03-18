@@ -5,6 +5,7 @@ router.get('/', (req, res) => {
     try{
         let users = User.find()
         console.log(users)
+        console.log('er')
         res.status(200).json({ mockUserData })
     }catch(e){
         console.log(e)
