@@ -5,10 +5,11 @@
   "license": "MIT",
   "scripts": {
     "start": "node server.js",
-    "test" : "jest",
-    "dev" : "nodemon server"
+    "test": "jest",
+    "dev": "nodemon server"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "uuid-apikey": "^1.5.2"
   },
   "devDependencies": {
