@@ -5,14 +5,23 @@
   "license": "MIT",
   "scripts": {
     "start": "node server.js",
+<<<<<<< HEAD
     "test": "jest",
     "dev": "nodemon server"
   },
   "dependencies": {
     "express": "^4.17.1",
+=======
+    "dev": "nodemon server"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.12.0",
+>>>>>>> f3d75a9f8cf50ff0eb881650fe43936c627e3f26
     "uuid-apikey": "^1.5.2"
   },
-  "devDependencies": {
-    "jest": "^26.6.3"
-  }
+  "devDependencies": {}
 }
