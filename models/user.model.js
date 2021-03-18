@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = require('mongoose').Schema
+const bcrypt = require('bcrypt')
 
 const userSchema = new Schema({
     email: { type: String, required: true },
@@ -19,5 +20,6 @@ const userSchema = new Schema({
     followers: [ { type: mongoose.Schema.Types.ObjectId }]
 
 })
+
 
 module.exports = mongoose.model('User', userSchema)

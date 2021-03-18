@@ -2,6 +2,7 @@ const router = require('express').Router()
 const User = require('../models/user.model')
 const mockUserData = require('../lib/mockUserData')
 
+
 router.get('/', (req, res) => {
     try{
         res.status(200).json({ mockUserData })
