@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {Row, Col, NavLink } from 'react-bootstrap'
+import ProfilePic from "./ProfilePic";
 
 const Header = (props) => {
 
@@ -12,9 +13,12 @@ const Header = (props) => {
             <Col md={9}></Col>
             <Col md={2} className="d-flex">
                 <NavLink>Home</NavLink>
-                <NavLink>Profile Pic</NavLink>
-            </Col>
+                <NavLink>
 
+                        <ProfilePic imageSource="http://placehold.it/50x50"/>
+
+                </NavLink>
+            </Col>
         </Row>
     )
 }

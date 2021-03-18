@@ -1,9 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import axios from "axios";
 import Header from "./components/Header";
-
+import Sidebar from "./components/Sidebar";
+import {Row, Col, Card, Container, Button} from 'react-bootstrap'
+import mockUserData from './lib/mockUserData'
+import Post from "./components/Post";
 
 function App() {
   const [isAuth, setAuth] = React.useState(false)
@@ -48,9 +51,32 @@ function App() {
       console.log(er.data)
     })
   }
+
+
   return (
       <div className="App">
           <Header />
+          <Container>
+              <Row>
+                  <Col md={3}>
+                      <Sidebar userData={mockUserData[0]}/>
+                  </Col>
+
+                  <Col md={9}>
+                      <Row>
+                          {
+                              mockUserData[0].posts.map(post => (
+                                  <Post post={post} username={mockUserData[0].username}/>
+                              ))
+                          }
+
+                      </Row>
+
+                  </Col>
+              </Row>
+          </Container>
+
+
         {/*{isAuth ? "You are signed in" : "not signed in pls sign in"}*/}
         {/*{!isAuth &&*/}
         {/*<>*/}
