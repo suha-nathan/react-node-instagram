@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React, {useEffect} from 'react'
 import axios from "axios";
+import Header from "./components/Header";
 
 
 function App() {
@@ -49,14 +50,15 @@ function App() {
   }
   return (
       <div className="App">
-        {isAuth ? "You are signed in" : "not signed in pls sign in"}
-        {!isAuth &&
-        <>
-          <button onClick={() => register("email", "password")}>Register</button>
-          <button onClick={() => login("test", "test")}>Login</button>
-        </>}
-        {isAuth &&
-        <button onClick={logout}>Logout</button>}
+          <Header />
+        {/*{isAuth ? "You are signed in" : "not signed in pls sign in"}*/}
+        {/*{!isAuth &&*/}
+        {/*<>*/}
+        {/*  <button onClick={() => register("email", "password")}>Register</button>*/}
+        {/*  <button onClick={() => login("test", "test")}>Login</button>*/}
+        {/*</>}*/}
+        {/*{isAuth &&*/}
+        {/*<button onClick={logout}>Logout</button>}*/}
       </div>
   );
 }
